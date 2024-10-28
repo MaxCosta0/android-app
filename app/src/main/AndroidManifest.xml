@@ -5,26 +5,59 @@
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Imepac"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".FormLogin"
-            android:theme="@style/AppTheme"
+            android:name=".TelaPrincipal"
+            android:exported="true"
             android:label="Imepac"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/AppTheme">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".Tela_Perfil"
+            android:exported="true"
+            android:label="Imepac"
+            android:theme="@style/AppTheme">
+
+<!--             <intent-filter>-->
+<!--             <action android:name="android.intent.action.MAIN" />-->
+<!--             <category android:name="android.intent.category.LAUNCHER" />-->
+<!--             </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".FormCadastro"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".FormLogin"
+            android:exported="true"
+            android:label="Imepac"
+            android:theme="@style/AppTheme">
+
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Imepac"/>
+            android:label="Imepac" />
     </application>
 
 </manifest>
