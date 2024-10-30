@@ -25,7 +25,7 @@
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
         android:contentDescription="User Image"
-        android:src="@drawable/fachada"
+        android:src="@drawable/person"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -68,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:padding="16dp">
 
-        <!-- Medidas corporais -->
+        <!-- Peso -->
         <TextView
             android:id="@+id/weight_label"
             android:layout_width="wrap_content"
@@ -77,13 +77,15 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
+        <EditText
             android:id="@+id/weight_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="75 kg"
+            android:inputType="numberDecimal"
+            android:text="75"
             android:textSize="16sp" />
 
+        <!-- Altura -->
         <TextView
             android:id="@+id/height_label"
             android:layout_width="wrap_content"
@@ -93,11 +95,12 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
+        <EditText
             android:id="@+id/height_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1.80 m"
+            android:inputType="numberDecimal"
+            android:text="1.80"
             android:textSize="16sp" />
 
         <TextView
@@ -117,5 +120,16 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Salvar"
+        app:layout_constraintTop_toBottomOf="@id/body_measurements_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
