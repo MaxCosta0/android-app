@@ -13,51 +13,51 @@
         android:theme="@style/Theme.Imepac"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
             android:name=".TelaPrincipal"
             android:exported="true"
             android:label="Imepac"
             android:theme="@style/AppTheme">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
+
         <activity
             android:name=".Tela_Perfil"
             android:exported="true"
             android:label="Imepac"
             android:theme="@style/AppTheme">
-
-<!--             <intent-filter>-->
-<!--             <action android:name="android.intent.action.MAIN" />-->
-<!--             <category android:name="android.intent.category.LAUNCHER" />-->
-<!--             </intent-filter>-->
         </activity>
+
         <activity
             android:name=".FormCadastro"
             android:exported="true"
             android:theme="@style/AppTheme">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
+
         <activity
             android:name=".FormLogin"
             android:exported="true"
             android:label="Imepac"
             android:theme="@style/AppTheme">
-
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="Imepac" />
+
+        <!-- Adicionando a FichaTreinoActivity -->
+        <activity
+            android:name=".FichaTreino"
+            android:exported="true"
+            android:label="Ficha de Treino"
+            android:theme="@style/AppTheme">
+        </activity>
+
     </application>
 
 </manifest>

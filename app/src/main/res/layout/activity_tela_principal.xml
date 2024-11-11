@@ -15,8 +15,8 @@
         android:layout_margin="16dp"
         android:contentDescription="Settings Icon"
         android:src="@drawable/person"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Imagem do usuário -->
     <ImageView
@@ -26,9 +26,9 @@
         android:layout_marginTop="16dp"
         android:contentDescription="User Image"
         android:src="@drawable/person"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Nome do usuário -->
     <EditText
@@ -39,9 +39,9 @@
         android:text="Nome do Usuário"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/user_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/user_image" />
 
     <!-- Email do usuário -->
     <EditText
@@ -51,22 +51,38 @@
         android:layout_marginTop="4dp"
         android:text="email@exemplo.com"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/user_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+    <TextView
+        android:id="@+id/link_ficha_treino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ver Ficha de Treino"
+        android:textColor="@color/azul_imepac"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_email" />
+
 
     <!-- Container para medidas corporais -->
     <LinearLayout
         android:id="@+id/body_measurements_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/user_email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:padding="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_email">
 
         <!-- Peso -->
         <TextView
@@ -127,9 +143,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Salvar"
-        app:layout_constraintTop_toBottomOf="@id/body_measurements_container"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/body_measurements_container" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

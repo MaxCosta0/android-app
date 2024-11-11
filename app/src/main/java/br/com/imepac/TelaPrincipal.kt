@@ -29,11 +29,6 @@ class TelaPrincipal : AppCompatActivity() {
         carregarDados()
         fetchAllNames()
 
-        // Exemplo de dados fixos para medidas corporais
-//        weightValue.text = "75 kg"
-//        heightValue.text = "1.80 m"
-//        bmiValue.text = "23.1"
-
         val iconSettings: ImageView = findViewById(R.id.icon_settings)
         iconSettings.setOnClickListener {
             val intent = Intent(this, Tela_Perfil::class.java)
@@ -43,6 +38,14 @@ class TelaPrincipal : AppCompatActivity() {
         saveButton.setOnClickListener {
             salvarDados()
         }
+
+        // Configura o link para a ficha de treino
+        val fichaTreinoLink: TextView = findViewById(R.id.link_ficha_treino)
+        fichaTreinoLink.setOnClickListener {
+            val intent = Intent(this, FichaTreino::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onStart() {
